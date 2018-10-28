@@ -1,0 +1,31 @@
+Exemplos usando CURL:
+
+curl -X POST \
+  http://localhost:5000/parse \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 39172922-ad83-4064-ba6b-6af8cea23d5a' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"q":"A joke please",
+	"project": "default"
+}'
+
+
+curl -X GET \
+  http://localhost:5000/status \
+  -H 'Postman-Token: 9eb24dd6-be12-4bd0-a4a3-4e0c8fd29ac2' \
+  -H 'cache-control: no-cache'
+  
+  
+curl -X GET \
+  http://localhost:5000/version \
+  -H 'Postman-Token: 4fac12e2-b7d2-4065-957c-7253f58002c2' \
+  -H 'cache-control: no-cache'
+  
+
+curl -X GET \
+  http://localhost:5000/config \
+  -H 'Postman-Token: f34ef9d7-df5e-4110-9c41-26e64ac15dc4' \
+  -H 'cache-control: no-cache'
+  
+
