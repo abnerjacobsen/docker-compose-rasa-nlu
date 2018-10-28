@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "76a569fe-f200-97fe-ad46-d15af384fb1e",
+		"name": "rasa-full-stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NLU parser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"q\":\"A joke please\",\n\t\"project\": \"default\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/parse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"parse"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Informando qual projeto usar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"q\":\"A joke please\",\n\t\"project\": \"default\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/nlu/parse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"nlu",
+								"parse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"name": "access-control-allow-origin",
+							"description": ""
+						},
+						{
+							"key": "content-length",
+							"value": "663",
+							"name": "content-length",
+							"description": ""
+						},
+						{
+							"key": "content-type",
+							"value": "application/json",
+							"name": "content-type",
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "Thu, 25 Oct 2018 22:14:00 GMT",
+							"name": "date",
+							"description": ""
+						},
+						{
+							"key": "server",
+							"value": "TwistedWeb/18.9.0",
+							"name": "server",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"intent\": {\n    \"name\": \"joke\",\n    \"confidence\": 0.7727253787113129\n  },\n  \"entities\": [],\n  \"intent_ranking\": [\n    {\n      \"name\": \"joke\",\n      \"confidence\": 0.7727253787113129\n    },\n    {\n      \"name\": \"greet\",\n      \"confidence\": 0.061411774609490856\n    },\n    {\n      \"name\": \"name\",\n      \"confidence\": 0.05015398259235015\n    },\n    {\n      \"name\": \"thank\",\n      \"confidence\": 0.044701038797837836\n    },\n    {\n      \"name\": \"bye\",\n      \"confidence\": 0.0407617534424718\n    },\n    {\n      \"name\": \"affirm\",\n      \"confidence\": 0.030246071846536073\n    }\n  ],\n  \"text\": \"A joke please\",\n  \"project\": \"default\",\n  \"model\": \"model_20181025-212932\"\n}"
+				},
+				{
+					"name": "Usando o projeto default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"q\":\"A joke please\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/nlu/parse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"nlu",
+								"parse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"name": "access-control-allow-origin",
+							"description": ""
+						},
+						{
+							"key": "content-length",
+							"value": "663",
+							"name": "content-length",
+							"description": ""
+						},
+						{
+							"key": "content-type",
+							"value": "application/json",
+							"name": "content-type",
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "Thu, 25 Oct 2018 22:14:00 GMT",
+							"name": "date",
+							"description": ""
+						},
+						{
+							"key": "server",
+							"value": "TwistedWeb/18.9.0",
+							"name": "server",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"intent\": {\n    \"name\": \"joke\",\n    \"confidence\": 0.7727253787113129\n  },\n  \"entities\": [],\n  \"intent_ranking\": [\n    {\n      \"name\": \"joke\",\n      \"confidence\": 0.7727253787113129\n    },\n    {\n      \"name\": \"greet\",\n      \"confidence\": 0.061411774609490856\n    },\n    {\n      \"name\": \"name\",\n      \"confidence\": 0.05015398259235015\n    },\n    {\n      \"name\": \"thank\",\n      \"confidence\": 0.044701038797837836\n    },\n    {\n      \"name\": \"bye\",\n      \"confidence\": 0.0407617534424718\n    },\n    {\n      \"name\": \"affirm\",\n      \"confidence\": 0.030246071846536073\n    }\n  ],\n  \"text\": \"A joke please\",\n  \"project\": \"default\",\n  \"model\": \"model_20181025-212932\"\n}"
+				}
+			]
+		},
+		{
+			"name": "NLU train",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-yml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://localhost/nlu/train?project=projects/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"nlu",
+						"train"
+					],
+					"query": [
+						{
+							"key": "project",
+							"value": "projects/default"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLU status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLU version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/version",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLU config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/config",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
