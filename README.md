@@ -19,9 +19,8 @@ docker -v && docker-compose -v
 ```
 
 If your output is not similar to the one above, please install Docker.
-See `this instruction page <https://docs.docker.com/install/>`_ for the
+See [this page](https://docs.docker.com/install/) for the
 instructions.
-
     
 ## Quick Start
 --------------
@@ -97,6 +96,6 @@ You can use *Postman* to test the API instead of *curl*. There is a *Postman* co
 `postman/rasa-full-stack.postman_collection.json`
  
 If you don't have it, please install Postman.
-See `this instruction page <https://www.getpostman.com/docs/v6/postman/launching_postman/installation_and_updates>` for the
+See [this page](https://www.getpostman.com/docs/v6/postman/launching_postman/installation_and_updates) for the
 instructions.
 
