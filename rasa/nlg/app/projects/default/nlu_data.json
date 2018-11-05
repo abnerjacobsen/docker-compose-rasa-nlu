@@ -1,0 +1,146 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "perfect",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "very good",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "amazing",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "wonderful",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "I am feeling very good",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "I am great",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "I'm good",
+        "intent": "mood_happy",
+        "entities": []
+      },
+      {
+        "text": "sad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "very sad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "unhappy",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "bad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "very bad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "awful",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "terrible",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "not very good",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "extremely sad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "so sad",
+        "intent": "mood_unhappy",
+        "entities": []
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you around",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you later",
+        "intent": "goodbye",
+        "entities": []
+      }
+    ]
+  }
+}

@@ -1,2 +1,9 @@
 # temporary
 *~
+*.log
+
+# Data
+#data/*
+
+# Models
+rasa/nlg/app/models/nlu/*
