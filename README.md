@@ -5,9 +5,9 @@
 
 Requirements for the tutorial:
 
-    - A text editor of your choice
-    - Docker
-    - Docker-compose
+  - A text editor of your choice
+  - Docker
+  - Docker-compose
 
 If you are not sure whether Docker is installed on your machine execute the
 following command:
@@ -46,19 +46,30 @@ docker-compose up -d
 curl --request POST --url http://localhost:5000/parse \
   --header 'content-type: application/json' \
   --data '{"q": "very good", "project": "default"}'
-curl --request POST --url http://localhost:5000/parse --header 'content-type: application/json' --data '{"q": "sad", "project": "default"}'
+
+curl --request POST --url http://localhost:5000/parse \
+  --header 'content-type: application/json' \
+  --data '{"q": "sad", "project": "default"}'
 
 # 5. Test Duckling.
-curl --request POST --url http://localhost:5000/parse --header 'content-type: application/json' --data '{"q": "My email is user@domain.com", "project": "default"}'
-curl --request POST --url http://localhost:5000/parse --header 'content-type: application/json' --data '{"q": "Amount to pay is US$ 1,000.00", "project": "default"}'
+curl --request POST --url http://localhost:5000/parse \
+  --header 'content-type: application/json' 
+  --data '{"q": "My email is user@domain.com", "project": "default"}'
+
+curl --request POST --url http://localhost:5000/parse \
+  --header 'content-type: application/json' \
+  --data '{"q": "Amount to pay is US$ 1,000.00", "project": "default"}'
 ```
 
 ## Training with your own data
+------------------------------
 
 ```bash
 # 1. Edit the training data to fit your needs.
 nano -w rasa/nlu/app/projects/default/nlu_data.json
 
 # 2. Train Rasa NLU with the changed data file.
-curl --request POST --url 'http://localhost:5000/train?project=default' -H'Content-Type: application/json' --data @rasa/nlu/app/projects/default/nlu_data.json
+curl --request POST --url http://localhost:5000/train?project=default \
+  -H 'Content-Type: application/json' \
+  --data @rasa/nlu/app/projects/default/nlu_data.json
 ```
