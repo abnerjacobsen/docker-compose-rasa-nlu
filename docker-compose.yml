@@ -1,6 +1,6 @@
 version: '3'
 services:
-  rasanlg:
+  rasanlu:
     build:
       context: ./rasa/nlu
       dockerfile: Dockerfile
@@ -10,7 +10,7 @@ services:
       - /bin/bash
       - -c
       - |
-          python -m rasa_nlu.train -c config/config_spacy_duckling.yml --data projects/default/nlu_data.json -o models/nlu --project default --verbose
+          python -m rasa_nlu.train -c config/default.yml --data projects/default/nlu_data.json -o models/nlu --project default --verbose
           python -m rasa_nlu.server --port 5000 -c /app/config/config_spacy_duckling.yml --path models/nlu --response_log /app/logs --debug
     ports:
       - '5000:5000'
