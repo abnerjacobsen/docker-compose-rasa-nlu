@@ -1,8 +1,6 @@
 # docker-compose for Rasa NLU boilerplate
 
-.. contents::
-
-1. Setup
+## Setup
 --------
 
 Requirements for the tutorial:
@@ -14,17 +12,18 @@ Requirements for the tutorial:
 If you are not sure whether Docker is installed on your machine execute the
 following command:
 
-  .. code-block:: bash
-
-    docker -v && docker-compose -v
-    # Docker version 18.06.1-ce, build e68fc7a
-    # docker-compose version 1.21.2, build a133471
+```bash
+docker -v && docker-compose -v
+ # Docker version 18.06.1-ce, build e68fc7a
+ # docker-compose version 1.21.2, build a133471
+```
 
 If your output is not similar to the one above, please install Docker.
 See `this instruction page <https://docs.docker.com/install/>`_ for the
 instructions.
 
-2. Quick Start
+    
+## Quick Start
 --------------
 
 This section will cover the following:
@@ -32,8 +31,6 @@ This section will cover the following:
     - Clone this repository
     - Start Docker container with default sample data
     - Test if the Rasa NLU is working
-    
-## Quick Start
 
 ```bash
 # 1. Clone the repository.
