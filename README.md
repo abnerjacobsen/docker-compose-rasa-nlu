@@ -1,4 +1,4 @@
-# docker-compose for Rasa NLU boilerplate
+# Docker-compose for Rasa NLU boilerplate
 
 ## Setup
 --------
@@ -73,3 +73,30 @@ curl --request POST --url http://localhost:5000/train?project=default \
   -H 'Content-Type: application/json' \
   --data @rasa/nlu/app/projects/default/nlu_data.json
 ```
+
+## Other API calls avaiable for the Rasa NLU container
+------------------------------------------------------
+
+```bash
+# 1. Status.
+curl -X GET \
+  http://localhost:5000/status \
+  -H 'Content-Type: application/json'
+
+# 2. Version.
+curl -X GET \
+  http://localhost:5000/version \
+  -H 'Content-Type: application/json'
+```
+
+## Postman
+----------
+
+You can use *Postman* to test the API instead of *curl*. There is a *Postman* collection file that you can import on it:
+
+`postman/rasa-full-stack.postman_collection.json`
+ 
+If you don't have it, please install Postman.
+See `this instruction page <https://www.getpostman.com/docs/v6/postman/launching_postman/installation_and_updates>` for the
+instructions.
+
