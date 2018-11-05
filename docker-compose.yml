@@ -2,7 +2,7 @@ version: '3'
 services:
   rasanlg:
     build:
-      context: ./rasa/nlg
+      context: ./rasa/nlu
       dockerfile: Dockerfile
       args:
         env: dev
@@ -15,10 +15,10 @@ services:
     ports:
       - '5000:5000'
     volumes:
-      - ./rasa/nlg/app/projects:/app/projects
-      - ./rasa/nlg/app/config/:/app/config
-      - ./rasa/nlg/app/models/:/app/models
-      - ./data/rasa/nlg/logs:/app/logs
+      - ./rasa/nlu/app/projects:/app/projects
+      - ./rasa/nlu/app/config/:/app/config
+      - ./rasa/nlu/app/models/:/app/models
+      - ./data/rasa/nlu/logs:/app/logs
   duckling:
     image: rasa/duckling:latest
   redis:

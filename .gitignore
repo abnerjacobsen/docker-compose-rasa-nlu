@@ -6,4 +6,4 @@
 #data/*
 
 # Models
-rasa/nlg/app/models/nlu/*
+rasa/nlu/app/models/nlu/*
