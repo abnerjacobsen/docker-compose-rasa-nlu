@@ -1,4 +1,4 @@
-FROM rasa/rasa_nlu:latest
+FROM rasa/rasa_nlu:latest-full
 MAINTAINER Abner G Jacobsen - http://daspanel.com <admin@daspanel.com>
 
 # A little bit of metadata management.
