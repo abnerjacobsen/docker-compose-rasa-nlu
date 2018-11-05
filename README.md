@@ -1,4 +1,4 @@
-# Docker-compose for Rasa NLU boilerplate
+# Docker-compose for Rasa NLU boilerplate - WIP
 
 ## Setup
 --------
