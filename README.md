@@ -28,9 +28,9 @@ instructions.
 
 This section will cover the following:
 
-    - Clone this repository
-    - Start Docker container with default sample data
-    - Test if the Rasa NLU is working
+  - Clone this repository
+  - Start Docker container with default sample data
+  - Test if the Rasa NLU is working
 
 ```bash
 # 1. Clone the repository.
@@ -43,7 +43,9 @@ cd nlu-new-project
 docker-compose up -d
 
 # 4. Test it.
-curl --request POST --url http://localhost:5000/parse --header 'content-type: application/json' --data '{"q": "very good", "project": "default"}'
+curl --request POST --url http://localhost:5000/parse \
+  --header 'content-type: application/json' \
+  --data '{"q": "very good", "project": "default"}'
 curl --request POST --url http://localhost:5000/parse --header 'content-type: application/json' --data '{"q": "sad", "project": "default"}'
 
 # 5. Test Duckling.
