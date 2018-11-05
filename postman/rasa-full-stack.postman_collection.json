@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "76a569fe-f200-97fe-ad46-d15af384fb1e",
+		"name": "rasa-full-stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NLU parser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"q\":\"A joke please\",\n\t\"project\": \"default\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/parse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"parse"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Informando qual projeto usar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"q\":\"A joke please\",\n\t\"project\": \"default\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/nlu/parse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"nlu",
+								"parse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"name": "access-control-allow-origin",
+							"description": ""
+						},
+						{
+							"key": "content-length",
+							"value": "663",
+							"name": "content-length",
+							"description": ""
+						},
+						{
+							"key": "content-type",
+							"value": "application/json",
+							"name": "content-type",
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "Thu, 25 Oct 2018 22:14:00 GMT",
+							"name": "date",
+							"description": ""
+						},
+						{
+							"key": "server",
+							"value": "TwistedWeb/18.9.0",
+							"name": "server",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"intent\": {\n    \"name\": \"joke\",\n    \"confidence\": 0.7727253787113129\n  },\n  \"entities\": [],\n  \"intent_ranking\": [\n    {\n      \"name\": \"joke\",\n      \"confidence\": 0.7727253787113129\n    },\n    {\n      \"name\": \"greet\",\n      \"confidence\": 0.061411774609490856\n    },\n    {\n      \"name\": \"name\",\n      \"confidence\": 0.05015398259235015\n    },\n    {\n      \"name\": \"thank\",\n      \"confidence\": 0.044701038797837836\n    },\n    {\n      \"name\": \"bye\",\n      \"confidence\": 0.0407617534424718\n    },\n    {\n      \"name\": \"affirm\",\n      \"confidence\": 0.030246071846536073\n    }\n  ],\n  \"text\": \"A joke please\",\n  \"project\": \"default\",\n  \"model\": \"model_20181025-212932\"\n}"
+				},
+				{
+					"name": "Usando o projeto default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"q\":\"A joke please\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/nlu/parse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"nlu",
+								"parse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"name": "access-control-allow-origin",
+							"description": ""
+						},
+						{
+							"key": "content-length",
+							"value": "663",
+							"name": "content-length",
+							"description": ""
+						},
+						{
+							"key": "content-type",
+							"value": "application/json",
+							"name": "content-type",
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "Thu, 25 Oct 2018 22:14:00 GMT",
+							"name": "date",
+							"description": ""
+						},
+						{
+							"key": "server",
+							"value": "TwistedWeb/18.9.0",
+							"name": "server",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"intent\": {\n    \"name\": \"joke\",\n    \"confidence\": 0.7727253787113129\n  },\n  \"entities\": [],\n  \"intent_ranking\": [\n    {\n      \"name\": \"joke\",\n      \"confidence\": 0.7727253787113129\n    },\n    {\n      \"name\": \"greet\",\n      \"confidence\": 0.061411774609490856\n    },\n    {\n      \"name\": \"name\",\n      \"confidence\": 0.05015398259235015\n    },\n    {\n      \"name\": \"thank\",\n      \"confidence\": 0.044701038797837836\n    },\n    {\n      \"name\": \"bye\",\n      \"confidence\": 0.0407617534424718\n    },\n    {\n      \"name\": \"affirm\",\n      \"confidence\": 0.030246071846536073\n    }\n  ],\n  \"text\": \"A joke please\",\n  \"project\": \"default\",\n  \"model\": \"model_20181025-212932\"\n}"
+				}
+			]
+		},
+		{
+			"name": "NLU train",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"rasa_nlu_data\": {\n    \"common_examples\": [\n      {\n        \"intent\": \"greet\",\n        \"text\": \"OI\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Ola\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Bom dia\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Ei\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 13,\n            \"value\": \"medico\",\n            \"entity\": \"query\",\n            \"start\": 7\n          }\n        ],\n        \"text\": \"Qual o medico?\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 10,\n            \"value\": \"dia\",\n            \"entity\": \"query\",\n            \"start\": 7\n          }\n        ],\n        \"text\": \"Qual o dia?\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 11,\n            \"value\": \"hora\",\n            \"entity\": \"query\",\n            \"start\": 7\n          }\n        ],\n        \"text\": \"Qual a hora?\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 11,\n            \"value\": \"data\",\n            \"entity\": \"query\",\n            \"start\": 7\n          }\n        ],\n        \"text\": \"Qual a data?\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 9,\n            \"value\": \"Quem fala\",\n            \"entity\": \"query\",\n            \"start\": 0\n          }\n        ],\n        \"text\": \"Quem fala?\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim eu confirmo\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim eu vou\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim eu irei\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não eu não vou\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não poderei ir\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"irei faltar\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não, não vou\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não vai dar\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não vamos\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não iremos\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"não vou poder\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"tenho outro compromisso\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"nunca\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 15,\n            \"value\": \"endereço\",\n            \"entity\": \"query\",\n            \"start\": 7\n          }\n        ],\n        \"text\": \"Qual o endereço?\"\n      },\n      {\n        \"intent\": \"whatis\",\n        \"entities\": [\n          {\n            \"end\": 9,\n            \"value\": \"Onde fica\",\n            \"entity\": \"query\",\n            \"start\": 0\n          }\n        ],\n        \"text\": \"Onde fica?\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"irei com certeza\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"eu irei\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"confirmo\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"nós confirmamos\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"nós iremos\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim, eu confirmo\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim, eu irei\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"ok, sim\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim, ok\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"ok\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"ok, eu vou sim\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"oi, bom dia\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"oi, boa tarde\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"oi, boa noite\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"oi, como vai\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim sim\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"oi\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"não, eu vou sim\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"sim, eu não vou\"\n      },\n      {\n        \"intent\": \"negar\",\n        \"text\": \"sim, eu nao vou\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Alo\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Alo, bom dia\"\n      },\n      {\n        \"intent\": \"greet\",\n        \"text\": \"Alo, boa tarde\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"remarcar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"gostaria de remarcar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"posso reagendar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"marcar para outro dia\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"eu quero remarcar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"eu quero reagendar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"quero reagendar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"quero sim reagendar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"quero marcar para outra hora\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"quero marcar para outro dia\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"queremos remarcar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"vamos remarcar\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"text\": \"remarcar para outro dia\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"claro\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"certeza\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"certesa\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"beleza\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"tá\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"ta bom\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim, com certeza\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"sim ok\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"certo\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"vou\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"vou ir\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"correto\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"certamente\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"vai dar\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"confirmado\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"pode confirmar\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"claro que vou\"\n      },\n      {\n        \"intent\": \"confirmar\",\n        \"text\": \"claro que irei\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"entities\": [\n          {\n            \"start\": 20,\n            \"end\": 26,\n            \"value\": \"amanhã\",\n            \"entity\": \"data\"\n          }\n        ],\n        \"text\": \"quero remarcar para amanhã\"\n      },\n      {\n        \"intent\": \"remarcar\",\n        \"entities\": [\n          {\n            \"start\": 20,\n            \"end\": 34,\n            \"value\": \"semana que vem\",\n            \"entity\": \"data\"\n          }\n        ],\n        \"text\": \"quero remarcar para semana que vem\"\n      }\n    ],\n    \"regex_features\": [],\n    \"entity_synonyms\": []\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/train?project=default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"train"
+					],
+					"query": [
+						{
+							"key": "project",
+							"value": "default"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLU status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NLU version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/version",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
