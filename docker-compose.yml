@@ -21,16 +21,16 @@ services:
       - ./data/rasa/nlu/logs:/app/logs
   duckling:
     image: rasa/duckling:latest
-  redis:
-    image: redis:4.0.11-alpine
-  proxy:
-    image: traefik:v1.6
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - traefik.frontend.rule=Host:${DOMAIN}
-      - traefik.enable=true
-      - traefik.port=80
+  #redis:
+  #  image: redis:4.0.11-alpine
+  #proxy:
+  #  image: traefik:v1.6
+  #  volumes:
+  #    - /var/run/docker.sock:/var/run/docker.sock
+  #  labels:
+  #    - traefik.frontend.rule=Host:${DOMAIN}
+  #    - traefik.enable=true
+  #    - traefik.port=80
   #flower:
   #  image: totem/celery-flower-docker
   #  environment:
