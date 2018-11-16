@@ -14,11 +14,11 @@ services:
           python -m rasa_nlu.server --port 5000 -c /app/config/default.yml --path models/nlu --response_log /app/logs --debug
     ports:
       - '5000:5000'
-    #volumes:
-    #  - ./rasa/nlu/app/projects:/app/projects
-    #  - ./rasa/nlu/app/config/:/app/config
-    #  - ./rasa/nlu/app/models/:/app/models
-    #  - ./data/rasa/nlu/logs:/app/logs
+    volumes:
+      - ./rasa/nlu/app/projects:/app/projects
+      - ./rasa/nlu/app/config/:/app/config
+      - ./rasa/nlu/app/models/:/app/models
+      - ./data/rasa/nlu/logs:/app/logs
   duckling:
     image: rasa/duckling:latest
   #redis:

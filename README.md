@@ -38,8 +38,11 @@ git clone https://github.com/abnerjacobsen/docker-compose-rasa-nlu.git nlu-new-p
 # 2. Enter your newly-cloned folder.
 cd nlu-new-project
 
-# 3. Start docker containers usiong docker-compose.
-docker-compose up -d
+# 3. Build the custom images.
+docker-compose build
+
+# 3. Start docker containers using the docker-compose.yml for local development.
+docker-compose -f docker-compose.dev.yml up -d
 
 # 4. Test it.
 curl --request POST --url http://localhost:5000/parse \

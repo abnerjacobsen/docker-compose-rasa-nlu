@@ -15,8 +15,10 @@ WORKDIR ${RASA_NLU_HOME}
 
 RUN python -m spacy download pt
 
-COPY . ${RASA_NLU_HOME}
+COPY . /
 WORKDIR ${RASA_NLU_HOME}
+
+RUN ls -la /app/
 
 # Copy as early as possible so we can cache ...
 COPY requirements.txt .
