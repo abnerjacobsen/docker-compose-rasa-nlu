@@ -1,6 +1,7 @@
 version: '3'
 services:
   rasanlu:
+    restart: unless-stopped
     build:
       context: ./rasa/nlu
       dockerfile: Dockerfile
@@ -20,6 +21,7 @@ services:
     #  - ./rasa/nlu/app/models/:/app/models
     #  - ./data/rasa/nlu/logs:/app/logs
   duckling:
+    restart: unless-stopped
     image: rasa/duckling:latest
   #redis:
   #  image: redis:4.0.11-alpine
